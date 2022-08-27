@@ -2,3 +2,5 @@
 .vscode
 *.out
 *.vcd
+node_modules/
+package-lock.json
