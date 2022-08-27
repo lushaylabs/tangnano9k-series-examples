@@ -7,3 +7,7 @@ Introduction project from Part 1 of the TangNano9K series full article can be fo
 
 ### UART
 UART module to send and receive data from the tang nano 9k using the onboard RV debugger, full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-debugging/)
+
+
+### Screen
+Contains a core to interface with a 0.96" Oled display, full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-graphics/)
