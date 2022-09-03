@@ -11,3 +11,6 @@ UART module to send and receive data from the tang nano 9k using the onboard RV 
 
 ### Screen
 Contains a core to interface with a 0.96" Oled display, full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-graphics/)
+
+### Text Engine
+Continues the screen core and adds a module which converts text to pixels using a font file, full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-creating-a-text-engine/)
