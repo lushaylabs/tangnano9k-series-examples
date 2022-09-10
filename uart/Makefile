@@ -10,7 +10,7 @@ uart.json: uart.v
 
 # Place and Route
 uart_pnr.json: uart.json
-	nextpnr-gowin --json uart.json --write uart_pnr.json --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
+	nextpnr-gowin --json uart.json --write uart_pnr.json --freq 27 --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
 
 # Generate Bitstream
 uart.fs: uart_pnr.json

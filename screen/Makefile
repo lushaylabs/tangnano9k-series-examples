@@ -10,7 +10,7 @@ screen.json: screen.v
 
 # Place and Route
 screen_pnr.json: screen.json
-	nextpnr-gowin --json screen.json --write screen_pnr.json --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
+	nextpnr-gowin --json screen.json --write screen_pnr.json --freq 27 --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
 
 # Generate Bitstream
 screen.fs: screen_pnr.json

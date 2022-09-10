@@ -10,7 +10,7 @@ text.json: top.v text.v screen.v
 
 # Place and Route
 text_pnr.json: text.json
-	nextpnr-gowin --json text.json --write text_pnr.json --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
+	nextpnr-gowin --json text.json --write text_pnr.json --freq 27 --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
 
 # Generate Bitstream
 text.fs: text_pnr.json

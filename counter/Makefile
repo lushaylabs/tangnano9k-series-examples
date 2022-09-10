@@ -10,7 +10,7 @@ counter.json: counter.v
 
 # Place and Route
 counter_pnr.json: counter.json
-	nextpnr-gowin --json counter.json --write counter_pnr.json --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
+	nextpnr-gowin --json counter.json --write counter_pnr.json --freq 27 --device ${DEVICE} --family ${FAMILY} --cst ${BOARD}.cst
 
 # Generate Bitstream
 counter.fs: counter_pnr.json
