@@ -8,7 +8,6 @@ Introduction project from Part 1 of the TangNano9K series full article can be fo
 ### UART
 UART module to send and receive data from the tang nano 9k using the onboard RV debugger, full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-debugging/)
 
-
 ### Screen
 Contains a core to interface with a 0.96" Oled display, full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-graphics/)
 
@@ -17,3 +16,6 @@ Continues the screen core and adds a module which converts text to pixels using 
 
 ### Data Visualization
 Different ways of converting binary numbers into visual representations that can be displayed to our OLED display, full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-data-visualization/) 
+
+### Flash Hex Navigator
+Article that goes over reading data from the onboard flash storage showing how to program the flash and building a flash navigator module which let's us navigate the memory displaying segments of the storage on screen in hex format. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-reading-the-external-flash/)
