@@ -26,7 +26,7 @@ data_test.o: text.v data_tb.v top.v uart.v rows.v screen.v
 
 # Run Simulation
 test: data_test.o
-	./data_test.o
+	vvp data_test.o
 
 # Generate Font
 font: font.hex

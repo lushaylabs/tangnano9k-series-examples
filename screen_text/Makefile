@@ -26,7 +26,7 @@ text_test.o: text.v text_tb.v top.v screen.v
 
 # Run Simulation
 test: text_test.o
-	./text_test.o
+	vvp text_test.o
 
 # Generate Font
 font: font.hex

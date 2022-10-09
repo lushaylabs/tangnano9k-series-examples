@@ -27,7 +27,7 @@ screen_test.o: screen.v screen_tb.v
 
 # Run Simulation
 test: screen_test.o
-	./screen_test.o
+	vvp screen_test.o
 
 # Cleanup build artifacts
 clean:

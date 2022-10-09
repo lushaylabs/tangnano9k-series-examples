@@ -27,7 +27,7 @@ uart_test.o: uart.v uart_tb.v
 
 # Run Simulation
 test: uart_test.o
-	./uart_test.o
+	vvp uart_test.o
 
 # Cleanup build artifacts
 clean:
