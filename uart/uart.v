@@ -99,7 +99,7 @@ initial begin
     testMemory[8] = "a";
     testMemory[9] = "b";
     testMemory[10] = "s";
-    testMemory[10] = " ";
+    testMemory[11] = " ";
 end
 
 localparam TX_STATE_IDLE = 0;
