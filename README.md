@@ -19,3 +19,6 @@ Different ways of converting binary numbers into visual representations that can
 
 ### Flash Hex Navigator
 Article that goes over reading data from the onboard flash storage showing how to program the flash and building a flash navigator module which let's us navigate the memory displaying segments of the storage on screen in hex format. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-reading-the-external-flash/)
+
+### Random Scrolling Graph
+Article that goes through the process of generating pseudo "random" numbers using LFSRs and plotting them to the screen creating a scrolling graph. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-generating-random/)
