@@ -134,7 +134,7 @@ module flashNavigator
       wire [7:0] hexChar;
       toHex hexConv(
         clk,
-        readAddress[(i*3)+:3],
+        readAddress[{i, 2'b0}+:4],
         hexChar
       );
     end
