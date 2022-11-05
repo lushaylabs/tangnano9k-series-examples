@@ -22,3 +22,6 @@ Article that goes over reading data from the onboard flash storage showing how t
 
 ### Random Scrolling Graph
 Article that goes through the process of generating pseudo "random" numbers using LFSRs and plotting them to the screen creating a scrolling graph. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-generating-random/)
+
+### Arbiter
+Implements a memory controller allowing for three modules to share a common memory. Full article can be found here [here](https://learn.lushaylabs.com/tang-nano-9k-sharing-resources/)
