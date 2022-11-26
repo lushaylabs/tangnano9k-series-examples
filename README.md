@@ -25,3 +25,6 @@ Article that goes through the process of generating pseudo "random" numbers usin
 
 ### Arbiter
 Implements a memory controller allowing for three modules to share a common memory. Full article can be found here [here](https://learn.lushaylabs.com/tang-nano-9k-sharing-resources/)
+
+### I2C ADC (ADS1115)
+Example project using 2 channels out of the 4 on the 16-bit ADC. This project reads two analog values and displays them on screen in both raw format and in volts. Full article can be found [here](https://learn.lushaylabs.com/i2c-adc-micro-procedures/)
