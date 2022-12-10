@@ -7,7 +7,7 @@ module toHex(
     output reg [7:0] hexChar = "0"
 );
     always @(posedge clk) begin
-        hexChar <= (value <= 9) ? 8'd48 + value : 8'd55 + value;
+        hexChar <= (value <= 4'd9) ? 8'd48 + value : 8'd55 + value;
     end
 endmodule
 
@@ -127,18 +127,12 @@ module flashNavigator
   end
 
   reg [7:0] chosenByte = 0;
-
-  genvar i;
-  generate
-    for (i = 0; i < 6; i = i + 1) begin: addr
-      wire [7:0] hexChar;
-      toHex hexConv(
-        clk,
-        readAddress[{i, 2'b0}+:4],
-        hexChar
-      );
-    end
-  endgenerate
+  wire [7:0] hexChar;
+  toHex hexConv(
+    clk,
+    readAddress[{(4'd13 - charAddress[3:0]), 2'd0}+:4],
+    hexChar
+  );
 
   always @(posedge clk) begin
     chosenByte <= dataInBuffer[(byteDisplayNumber << 3)+:8];
@@ -151,12 +145,7 @@ module flashNavigator
         4: charOutput <= ":";
         6: charOutput <= "0";
         7: charOutput <= "x";
-        8: charOutput <= addr[5].hexChar;
-        9: charOutput <= addr[4].hexChar;
-        10: charOutput <= addr[3].hexChar;
-        11: charOutput <= addr[2].hexChar;
-        12: charOutput <= addr[1].hexChar;
-        13: charOutput <= addr[0].hexChar;
+        8,9,10,11,12,13: charOutput <= hexChar;
         15: charOutput <= dataReady ? " " : "L";
         default: charOutput <= " ";
       endcase

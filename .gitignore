@@ -6,3 +6,7 @@ node_modules/
 package-lock.json
 .DS_Store
 *.bin
+*_pnr.json
+*.json
+!*.lushay.json
+*.o
