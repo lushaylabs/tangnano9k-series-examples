@@ -1,0 +1,15 @@
+{
+    "name": "arbiter",
+    "includedFiles": [
+        "controller.v",
+        "memory_inc.v",
+        "screen.v",
+        "shared_memory.v",
+        "text.v",
+        "top.v"
+    ],
+    "testBenches": ["controller_tb.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "synthGowinOptions": ["-noalu", "-nolutram", "-nowidelut"],
+    "nextPnrGowinOptions": ["--enable-auto-longwires", "--enable-globals"]
+}

@@ -1,0 +1,12 @@
+{
+    "name": "lfsr",
+    "includedFiles": [
+        "lfsr.v",
+        "screen.v",
+        "top.v"
+    ],
+    "testBenches": ["lfsr_tb.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "synthGowinOptions": ["-noalu"],
+    "nextPnrGowinOptions": ["--enable-auto-longwires", "--enable-globals"]
+}

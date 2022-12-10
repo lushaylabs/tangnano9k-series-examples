@@ -1,0 +1,6 @@
+{
+    "name": "screen_text",
+    "includedFiles": ["screen.v", "text.v", "top.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "testBenches": ["text_tb.v"]
+}

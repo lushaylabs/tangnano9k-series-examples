@@ -1,0 +1,13 @@
+{
+    "name": "screen_data",
+    "includedFiles": [
+        "screen.v",
+        "text.v",
+        "top.v",
+        "uart.v",
+        "rows.v"
+    ],
+    "testBenches": ["text.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "synthGowinOptions": ["-noalu"]
+}

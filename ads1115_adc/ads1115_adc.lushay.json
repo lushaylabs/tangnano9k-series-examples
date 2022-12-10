@@ -1,0 +1,14 @@
+{
+    "name": "ads1115_adc",
+    "includedFiles": [
+        "adc.v",
+        "i2c.v",
+        "screen.v",
+        "text.v",
+        "top.v"
+    ],
+    "testBenches": ["adc_tb.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "synthGowinOptions": ["-noalu", "-nowidelut"],
+    "nextPnrGowinOptions": ["--enable-globals", "--enable-auto-longwires"]
+}

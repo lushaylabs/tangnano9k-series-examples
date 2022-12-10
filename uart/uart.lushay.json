@@ -1,0 +1,7 @@
+{
+    "name": "uart",
+    "includedFiles": ["uart.v"],
+    "testBenches": ["uart_tb.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "top": "uart"
+}

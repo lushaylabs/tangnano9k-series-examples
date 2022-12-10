@@ -1,0 +1,7 @@
+{
+    "name": "screen",
+    "includedFiles": ["screen.v"],
+    "testBenches": ["screen_tb.v"],
+    "top": "screen",
+    "constraintsFile": "tangnano9k.cst"
+}

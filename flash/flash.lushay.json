@@ -1,0 +1,13 @@
+{
+    "name": "flash",
+    "includedFiles": [
+        "flash.v",
+        "screen.v",
+        "text.v",
+        "top.v"
+    ],
+    "constraintsFile": "tangnano9k.cst",
+    "synthGowinOptions": ["-noalu", "-nowidelut"],
+    "externalFlashFiles": ["numbers.bin"],
+    "nextPnrGowinOptions": ["--enable-auto-longwires", "--enable-globals"]
+}

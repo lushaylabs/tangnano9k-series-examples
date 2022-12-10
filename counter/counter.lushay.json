@@ -1,0 +1,6 @@
+{
+    "name": "counter",
+    "includedFiles": ["counter.v"],
+    "constraintsFile": "tangnano9k.cst",
+    "top": "counter"
+}
