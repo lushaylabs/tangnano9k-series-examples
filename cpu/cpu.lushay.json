@@ -1,0 +1,18 @@
+{
+    "name": "cpu",
+    "includedFiles": [
+        "flash.v",
+        "screen.v",
+        "text.v",
+        "top.v",
+        "cpu.v"
+    ],
+    "constraintsFile": "tangnano9k.cst",
+    "synthGowinOptions": ["-noalu", "-nowidelut", "-nolutram", "-nodffe"],
+    "externalFlashFiles": [
+        "programs/counter.bin", 
+        "programs/screen.bin",
+        "programs/btn_counter.bin"
+    ],
+    "nextPnrGowinOptions": ["--enable-globals"]
+}

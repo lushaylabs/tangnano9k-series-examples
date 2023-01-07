@@ -1,0 +1,55 @@
+CLR AC      ; screen pos stored in ac
+PRNT 42h    ; 'B'
+ADD 1       ; inc screen pos
+PRNT 74h    ; 't'
+ADD 1       ; inc screen pos
+PRNT 6eh    ; 'n'
+ADD 2       ; inc screen pos
+PRNT 50h    ; 'P'
+ADD 1       ; inc screen pos
+PRNT 72h    ; 'r'
+ADD 1       ; inc screen pos
+PRNT 65h    ; 'e'
+ADD 1       ; inc screen pos
+PRNT 73h    ; 's'
+ADD 1       ; inc screen pos
+PRNT 73h    ; 's'
+ADD 1       ; inc screen pos
+PRNT 65h    ; 'e'
+ADD 1       ; inc screen pos
+PRNT 64h    ; 'd'
+ADD 1       ; inc screen pos
+PRNT 3ah    ; ':'
+ADD 2       ; inc screen pos
+STA C       ; c stores screen pos
+CLR AC 
+JMPZ 60
+
+.org 60
+CLR AC      
+ADD 30h     ; '0'
+ADD A       ; a stores click count
+STA B       ; b stores character to print
+CLR AC
+ADD C       ; load screen pos
+PRNT B      ;
+CLR BTN     ; Clear AC if btn pressed
+JMPZ 80     ; if button is pressed jump down
+CLR AC
+JMPZ 60     ; button is not pressed reprint
+
+.org 80
+CLR AC      
+ADD A       ; load current count
+ADD 1       ; increment count
+STA A       ; store updated count
+CLR AC
+JMPZ 100    ; jump to 100 for debounce
+
+.org 100
+CLR AC
+ADD 1       ; load 1 into AC
+CLR BTN     ; clear if button is pressed
+JMPZ 100    ; if button is still pressed loop
+CLR AC      
+JMPZ 60     ; if button is not pressed reprint

@@ -1,0 +1,15 @@
+CLR AC
+STA B           ; B holds the current counter
+JMPZ 10
+
+.org 10
+ADD B           ; reload current counter
+ADD 1           ; inc AC by 1
+STA B           ; store counter in B
+STA LED
+WAIT 250
+WAIT 250
+WAIT 250
+WAIT 250        ; wait 1 second
+CLR AC          ; clear AC so we jump in the next line
+JMPZ 10

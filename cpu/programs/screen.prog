@@ -1,0 +1,21 @@
+CLR AC      ; screen pos stored in ac
+PRNT 48h    ; 'H'
+ADD 1       ; inc screen pos
+PRNT 65h    ; 'e'
+ADD 1       ; inc screen pos
+PRNT 6ch    ; 'l'
+ADD 1       ; inc screen pos
+PRNT 6ch    ; 'l'
+ADD 1       ; inc screen pos
+PRNT 6fh    ; 'o'
+ADD 2       ; inc screen pos
+PRNT 57h    ; 'W'
+ADD 1       ; inc screen pos
+PRNT 6fh    ; 'o'
+ADD 1       ; inc screen pos
+PRNT 72h    ; 'r'
+ADD 1       ; inc screen pos
+PRNT 6ch    ; 'l'
+ADD 1       ; inc screen pos
+PRNT 64h    ; 'd'
+HLT
