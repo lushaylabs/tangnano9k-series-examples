@@ -28,3 +28,6 @@ Implements a memory controller allowing for three modules to share a common memo
 
 ### I2C ADC (ADS1115)
 Example project using 2 channels out of the 4 on the 16-bit ADC. This project reads two analog values and displays them on screen in both raw format and in volts. Full article can be found [here](https://learn.lushaylabs.com/i2c-adc-micro-procedures/)
+
+### CPU Core
+Project where we implement our first CPU, this project implements a basic instruction set as well as an assembler for compiling programs into bytecode to be run on the CPU core. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-first-processor/)
