@@ -1,0 +1,7 @@
+{
+    "constraintsFile": "tangnano9k.cst",
+    "includedFiles": ["i2c.v", "edid.v", "top.v", "screen.v", "text.v", "todec.v"],
+    "synthGowinOptions": ["-noalu", "-nodffe", "-nowidelut"],
+    "nextPnrGowinOptions": ["--enable-globals"],
+    "testBenches": "all"
+}
