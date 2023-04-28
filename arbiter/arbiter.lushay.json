@@ -10,6 +10,6 @@
     ],
     "testBenches": ["controller_tb.v"],
     "constraintsFile": "tangnano9k.cst",
-    "synthGowinOptions": ["-noalu", "-nolutram", "-nowidelut"],
+    "synthGowinOptions": ["-noalu", "-nowidelut", "-nolutram"],
     "nextPnrGowinOptions": ["--enable-auto-longwires", "--enable-globals"]
 }

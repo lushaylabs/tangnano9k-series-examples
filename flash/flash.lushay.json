@@ -7,7 +7,6 @@
         "top.v"
     ],
     "constraintsFile": "tangnano9k.cst",
-    "synthGowinOptions": ["-noalu", "-nowidelut"],
-    "externalFlashFiles": ["numbers.bin"],
-    "nextPnrGowinOptions": ["--enable-auto-longwires", "--enable-globals"]
+    "synthGowinOptions": ["-noalu", "-nowidelut", "-nodffe"],
+    "externalFlashFiles": ["numbers.bin"]
 }

@@ -9,5 +9,5 @@
     ],
     "testBenches": ["text.v"],
     "constraintsFile": "tangnano9k.cst",
-    "synthGowinOptions": ["-noalu"]
+    "synthGowinOptions": ["-noalu", "-nowidelut"]
 }
