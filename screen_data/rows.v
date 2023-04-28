@@ -190,7 +190,7 @@ module progressRow(
             case (column)
                 0, 127: begin
                     bar = 8'b11000000;
-                    border = 8'b110000000;
+                    border = 8'b11000000;
                 end
                 1, 126: begin
                     bar = 8'b11100000;
