@@ -1,0 +1,11 @@
+IO_LOC  "refclk" 52;
+IO_PORT "refclk" PULL_MODE=UP;
+
+IO_LOC  "output_270ohm" 49;
+IO_PORT "output_270ohm" DRIVE=8 IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC  "output_330ohm" 31;
+IO_PORT "output_330ohm" DRIVE=8 IO_TYPE=LVCMOS33 PULL_MODE=DOWN;
+
+IO_LOC  "output_470ohm" 32;
+IO_PORT "output_470ohm" DRIVE=8 IO_TYPE=LVCMOS33 PULL_MODE=DOWN;

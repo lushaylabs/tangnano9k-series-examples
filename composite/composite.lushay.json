@@ -1,0 +1,5 @@
+{
+    "board": "tangnano9k",
+    "includedFiles": ["composite_count_test.v", "top.v"],
+    "constraintsFile": "tangnano9k.cst"
+}

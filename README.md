@@ -31,3 +31,6 @@ Example project using 2 channels out of the 4 on the 16-bit ADC. This project re
 
 ### CPU Core
 Project where we implement our first CPU, this project implements a basic instruction set as well as an assembler for compiling programs into bytecode to be run on the CPU core. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-first-processor/)
+
+### Composite Video
+Example implementation of composite video using the 240p NTSC standard. This project displays grayscale test patterns on the screen. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-composite-video/)
