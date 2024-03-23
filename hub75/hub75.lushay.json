@@ -1,0 +1,7 @@
+{
+    "name": "hub75",
+    "board": "tangnano9k",
+    "constraintsFile": "tangnano9k.cst",
+    "includedFiles": ["clock_divisor.v", "framebuffer.v", "bottom_half_rom.v", "top_half_rom.v", "hub75.v"],
+    "synthGowinOptions": ["-noalu", "-nobram", "-nodffe"]
+}
