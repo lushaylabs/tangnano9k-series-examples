@@ -34,3 +34,6 @@ Project where we implement our first CPU, this project implements a basic instru
 
 ### Composite Video
 Example implementation of composite video using the 240p NTSC standard. This project displays grayscale test patterns on the screen. Full article can be found [here](https://learn.lushaylabs.com/tang-nano-9k-composite-video/)
+
+### HUB75
+A project building a basic 2-bit color driver to control a HUB75 interfaced display. Full article can be found [here](https://learn.lushaylabs.com/led-panel-hub75/)
