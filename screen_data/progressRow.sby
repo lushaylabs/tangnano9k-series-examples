@@ -1,0 +1,16 @@
+[options]
+mode prove
+depth 25
+
+[engines]
+smtbmc
+# abc pdr
+# aiger avy
+# aiger suprove
+
+[script]
+read_verilog -DPROGRESS_ROW -formal rows.v
+prep -top progressRow
+
+[files]
+rows.v

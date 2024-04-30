@@ -1,0 +1,8 @@
+*.gprj.user
+*.user
+impl/
+screen/
+text/
+progressRow/
+uartTextRow/
+uart/

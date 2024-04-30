@@ -1,0 +1,151 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.35+36 (git sha1 c95298225, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \hexDecRow
+Used module:     \toHex
+Used module:     \toDec
+
+2.2. Analyzing design hierarchy..
+Top module:  \hexDecRow
+Used module:     \toHex
+Used module:     \toDec
+Removed 0 unused modules.
+Module hexDecRow directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+5. Printing statistics.
+
+=== toHex ===
+
+   Number of wires:                  8
+   Number of wire bits:             36
+   Number of public wires:           3
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  7
+     $add                            2
+     $assume                         1
+     $ff                             1
+     $le                             1
+     $mux                            1
+     $not                            1
+
+=== toDec ===
+
+   Number of wires:                 37
+   Number of wire bits:            227
+   Number of public wires:           9
+   Number of public wire bits:      61
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 36
+     $add                            7
+     $assume                         1
+     $eq                             4
+     $ff                             7
+     $ge                             3
+     $logic_not                      1
+     $mux                            8
+     $not                            1
+     $pmux                           4
+
+=== hexDecRow ===
+
+   Number of wires:                 89
+   Number of wire bits:            199
+   Number of public wires:          35
+   Number of public wire bits:     138
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 88
+     $anyinit                       12
+     $anyseq                        11
+     $assert                         6
+     $assume                         1
+     $eq                            22
+     $ff                             6
+     $logic_not                      1
+     $mux                           22
+     $not                            1
+     $pmux                           1
+     $reduce_or                      2
+     toDec                           1
+     toHex                           2
+
+=== design hierarchy ===
+
+   hexDecRow                         1
+     toDec                           1
+     toHex                           2
+
+   Number of wires:                142
+   Number of wire bits:            498
+   Number of public wires:          50
+   Number of public wire bits:     225
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                135
+     $add                           11
+     $anyinit                       12
+     $anyseq                        11
+     $assert                         6
+     $assume                         4
+     $eq                            26
+     $ff                            15
+     $ge                             3
+     $le                             2
+     $logic_not                      2
+     $mux                           32
+     $not                            4
+     $pmux                           5
+     $reduce_or                      2
+
+6. Executing SMT2 backend.
+
+6.1. Executing BMUXMAP pass.
+
+6.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module toDec.
+Creating SMT-LIBv2 representation of module toHex.
+Creating SMT-LIBv2 representation of module hexDecRow.
+
+End of script. Logfile hash: 8321b91b55, CPU: user 0.02s system 0.00s, MEM: 11.17 MB peak
+Yosys 0.35+36 (git sha1 c95298225, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 52% 2x write_smt2 (0 sec), 32% 2x read_ilang (0 sec), ...

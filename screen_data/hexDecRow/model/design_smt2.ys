@@ -1,0 +1,7 @@
+# running in hexDecRow/model/
+read_ilang design_prep.il
+hierarchy -smtcheck
+formalff -assume
+dffunmap
+stat
+write_smt2 -wires design_smt2.smt2

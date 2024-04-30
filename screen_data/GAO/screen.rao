@@ -1,0 +1,15 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="clk" trig_type="0" capture_amount="1024" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
+        <SignalList>
+            <Signal capture_enable="true">ioSclk</Signal>
+            <Signal capture_enable="true">ioSdin</Signal>
+            <Signal capture_enable="true">ioCs</Signal>
+            <Signal capture_enable="true">ioDc</Signal>
+            <Signal capture_enable="true">ioReset</Signal>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>1000010111111011</GAO_ID>
+</GAO_CONFIG>

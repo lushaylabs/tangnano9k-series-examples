@@ -1,0 +1,119 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.35+36 (git sha1 c95298225, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module toHex.
+Found 0 SCCs in module toDec.
+Found 0 SCCs in module hexDecRow.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing ASYNC2SYNC pass.
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toHex..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \hexDecRow..
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+Removed 3 unused cells and 3 unused wires.
+<suppressed ~6 debug messages>
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module hexDecRow...
+Checking module toDec...
+Checking module toHex...
+Found and reported 0 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hexDecRow.
+Optimizing module toDec.
+Optimizing module toHex.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\hexDecRow'.
+Finding identical cells in module `\toDec'.
+Finding identical cells in module `\toHex'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 7 on $procdff$495 ($ff) from module toHex.
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+
+11.5. Rerunning OPT passes. (Removed registers in this run.)
+
+11.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hexDecRow.
+Optimizing module toDec.
+Optimizing module toHex.
+
+11.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\hexDecRow'.
+Finding identical cells in module `\toDec'.
+Finding identical cells in module `\toHex'.
+Removed a total of 0 cells.
+
+11.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+
+11.10. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+Removed 0 unused cells and 22 unused wires.
+<suppressed ~1 debug messages>
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+End of script. Logfile hash: 2b60b9cf4e, CPU: user 0.04s system 0.00s, MEM: 11.05 MB peak
+Yosys 0.35+36 (git sha1 c95298225, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 28% 5x opt_clean (0 sec), 16% 2x opt_expr (0 sec), ...
