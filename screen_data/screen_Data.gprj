@@ -11,9 +11,9 @@
         <File path="top.v" type="file.verilog" enable="1"/>
         <File path="uart.v" type="file.verilog" enable="1"/>
         <File path="tangnano9k.cst" type="file.cst" enable="1"/>
-        <File path="/GAO/screen.rao" type="file.gao" enable="1"/>
-        <File path="/GAO/text.rao" type="file.gao" enable="0"/>
-        <File path="/GAO/uart.rao" type="file.gao" enable="0"/>
+        <File path="GAO/screen.rao" type="file.gao" enable="0"/>
+        <File path="GAO/text.rao" type="file.gao" enable="0"/>
+        <File path="GAO/uart.rao" type="file.gao" enable="0"/>
         <File path="font.hex" type="file.other" enable="1"/>
     </FileList>
 </Project>
