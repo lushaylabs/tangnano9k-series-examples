@@ -1,0 +1,5 @@
+*.gprj.user
+*.user
+impl/
+screen/
+text/
