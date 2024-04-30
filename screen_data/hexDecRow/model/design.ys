@@ -1,0 +1,7 @@
+# running in hexDecRow/src/
+read_verilog -DHEX_DEC_ROW -formal rows.v
+prep -top hexDecRow
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

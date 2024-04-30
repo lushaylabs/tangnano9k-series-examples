@@ -1,0 +1,548 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.35+36 (git sha1 c95298225, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: rows.v
+Parsing formal Verilog input from `rows.v' to AST representation.
+Generating RTLIL representation for module `\uartTextRow'.
+Generating RTLIL representation for module `\binaryRow'.
+Generating RTLIL representation for module `\toHex'.
+Generating RTLIL representation for module `\toDec'.
+Generating RTLIL representation for module `\hexDecRow'.
+Generating RTLIL representation for module `\progressRow'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \hexDecRow
+Used module:     \toDec
+Used module:     \toHex
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \hexDecRow
+Used module:     \toDec
+Used module:     \toHex
+Removing unused module `\progressRow'.
+Removing unused module `\binaryRow'.
+Removing unused module `\uartTextRow'.
+Removed 3 unused modules.
+Module hexDecRow directly or indirectly contains formal properties -> setting "keep" attribute.
+Mapping positional arguments of cell hexDecRow.dec (toDec).
+Mapping positional arguments of cell hexDecRow.h2 (toHex).
+Mapping positional arguments of cell hexDecRow.h1 (toHex).
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rows.v:200$190 in module hexDecRow.
+Marked 1 switch rules as full_case in process $proc$rows.v:147$156 in module toDec.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 22 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\toHex.$proc$rows.v:0$155'.
+  Set init value: \hexChar = 8'00110000
+Found init rule in `\hexDecRow.$proc$rows.v:0$233'.
+  Set init value: $formal$rows.v:253$189_EN = 1'0
+Found init rule in `\hexDecRow.$proc$rows.v:0$231'.
+  Set init value: $formal$rows.v:252$188_EN = 1'0
+Found init rule in `\hexDecRow.$proc$rows.v:0$229'.
+  Set init value: $formal$rows.v:251$187_EN = 1'0
+Found init rule in `\hexDecRow.$proc$rows.v:0$227'.
+  Set init value: $formal$rows.v:250$186_EN = 1'0
+Found init rule in `\hexDecRow.$proc$rows.v:0$225'.
+  Set init value: $formal$rows.v:249$185_EN = 1'0
+Found init rule in `\hexDecRow.$proc$rows.v:0$224'.
+  Set init value: \f_past_valid = 1'0
+Found init rule in `\toDec.$proc$rows.v:140$177'.
+  Set init value: \state = 4'0000
+Found init rule in `\toDec.$proc$rows.v:139$176'.
+  Set init value: \stepCounter = 4'0000
+Found init rule in `\toDec.$proc$rows.v:138$175'.
+  Set init value: \cachedValue = 8'00000000
+Found init rule in `\toDec.$proc$rows.v:137$174'.
+  Set init value: \digits = 12'000000000000
+Found init rule in `\toDec.$proc$rows.v:0$173'.
+  Set init value: \units = 8'00110000
+Found init rule in `\toDec.$proc$rows.v:0$172'.
+  Set init value: \tens = 8'00110000
+Found init rule in `\toDec.$proc$rows.v:0$171'.
+  Set init value: \hundreds = 8'00110000
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~6 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\toHex.$proc$rows.v:0$155'.
+Creating decoders for process `\toHex.$proc$rows.v:125$150'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:0$233'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:0$231'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:0$229'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:0$227'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:0$225'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:0$224'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:246$196'.
+     1/10: $0$formal$rows.v:249$185_EN[0:0]$204
+     2/10: $0$formal$rows.v:249$185_CHECK[0:0]$203
+     3/10: $0$formal$rows.v:250$186_EN[0:0]$206
+     4/10: $0$formal$rows.v:250$186_CHECK[0:0]$205
+     5/10: $0$formal$rows.v:251$187_EN[0:0]$208
+     6/10: $0$formal$rows.v:251$187_CHECK[0:0]$207
+     7/10: $0$formal$rows.v:252$188_EN[0:0]$210
+     8/10: $0$formal$rows.v:252$188_CHECK[0:0]$209
+     9/10: $0$formal$rows.v:253$189_EN[0:0]$212
+    10/10: $0$formal$rows.v:253$189_CHECK[0:0]$211
+Creating decoders for process `\hexDecRow.$proc$rows.v:239$192'.
+     1/2: $0$formal$rows.v:240$184_EN[0:0]$194
+     2/2: $0$formal$rows.v:240$184_CHECK[0:0]$193
+Creating decoders for process `\hexDecRow.$proc$rows.v:235$191'.
+Creating decoders for process `\hexDecRow.$proc$rows.v:200$190'.
+     1/1: $0\outByteReg[7:0]
+Creating decoders for process `\toDec.$proc$rows.v:140$177'.
+Creating decoders for process `\toDec.$proc$rows.v:139$176'.
+Creating decoders for process `\toDec.$proc$rows.v:138$175'.
+Creating decoders for process `\toDec.$proc$rows.v:137$174'.
+Creating decoders for process `\toDec.$proc$rows.v:0$173'.
+Creating decoders for process `\toDec.$proc$rows.v:0$172'.
+Creating decoders for process `\toDec.$proc$rows.v:0$171'.
+Creating decoders for process `\toDec.$proc$rows.v:147$156'.
+     1/7: $0\stepCounter[3:0]
+     2/7: $0\cachedValue[7:0]
+     3/7: $0\digits[11:0]
+     4/7: $0\units[7:0]
+     5/7: $0\tens[7:0]
+     6/7: $0\hundreds[7:0]
+     7/7: $0\state[3:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\hexDecRow.$formal$rows.v:240$184_CHECK' from process `\hexDecRow.$proc$rows.v:239$192'.
+No latch inferred for signal `\hexDecRow.$formal$rows.v:240$184_EN' from process `\hexDecRow.$proc$rows.v:239$192'.
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\toHex.\hexChar' using process `\toHex.$proc$rows.v:125$150'.
+  created $dff cell `$procdff$495' with positive edge clock.
+Creating register for signal `\hexDecRow.$past$rows.v:248$178$0' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$496' with positive edge clock.
+Creating register for signal `\hexDecRow.$past$rows.v:249$179$0' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$497' with positive edge clock.
+Creating register for signal `\hexDecRow.$past$rows.v:250$180$0' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$498' with positive edge clock.
+Creating register for signal `\hexDecRow.$past$rows.v:251$181$0' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$499' with positive edge clock.
+Creating register for signal `\hexDecRow.$past$rows.v:252$182$0' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$500' with positive edge clock.
+Creating register for signal `\hexDecRow.$past$rows.v:253$183$0' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$501' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:249$185_CHECK' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$502' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:249$185_EN' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:250$186_CHECK' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$504' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:250$186_EN' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$505' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:251$187_CHECK' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$506' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:251$187_EN' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:252$188_CHECK' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:252$188_EN' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:253$189_CHECK' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `\hexDecRow.$formal$rows.v:253$189_EN' using process `\hexDecRow.$proc$rows.v:246$196'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `\hexDecRow.\f_past_valid' using process `\hexDecRow.$proc$rows.v:235$191'.
+  created $dff cell `$procdff$512' with positive edge clock.
+Creating register for signal `\hexDecRow.\outByteReg' using process `\hexDecRow.$proc$rows.v:200$190'.
+  created $dff cell `$procdff$513' with positive edge clock.
+Creating register for signal `\toDec.\state' using process `\toDec.$proc$rows.v:147$156'.
+  created $dff cell `$procdff$514' with positive edge clock.
+Creating register for signal `\toDec.\hundreds' using process `\toDec.$proc$rows.v:147$156'.
+  created $dff cell `$procdff$515' with positive edge clock.
+Creating register for signal `\toDec.\tens' using process `\toDec.$proc$rows.v:147$156'.
+  created $dff cell `$procdff$516' with positive edge clock.
+Creating register for signal `\toDec.\units' using process `\toDec.$proc$rows.v:147$156'.
+  created $dff cell `$procdff$517' with positive edge clock.
+Creating register for signal `\toDec.\digits' using process `\toDec.$proc$rows.v:147$156'.
+  created $dff cell `$procdff$518' with positive edge clock.
+Creating register for signal `\toDec.\cachedValue' using process `\toDec.$proc$rows.v:147$156'.
+  created $dff cell `$procdff$519' with positive edge clock.
+Creating register for signal `\toDec.\stepCounter' using process `\toDec.$proc$rows.v:147$156'.
+  created $dff cell `$procdff$520' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `toHex.$proc$rows.v:0$155'.
+Removing empty process `toHex.$proc$rows.v:125$150'.
+Removing empty process `hexDecRow.$proc$rows.v:0$233'.
+Removing empty process `hexDecRow.$proc$rows.v:0$231'.
+Removing empty process `hexDecRow.$proc$rows.v:0$229'.
+Removing empty process `hexDecRow.$proc$rows.v:0$227'.
+Removing empty process `hexDecRow.$proc$rows.v:0$225'.
+Removing empty process `hexDecRow.$proc$rows.v:0$224'.
+Found and cleaned up 2 empty switches in `\hexDecRow.$proc$rows.v:246$196'.
+Removing empty process `hexDecRow.$proc$rows.v:246$196'.
+Found and cleaned up 1 empty switch in `\hexDecRow.$proc$rows.v:239$192'.
+Removing empty process `hexDecRow.$proc$rows.v:239$192'.
+Removing empty process `hexDecRow.$proc$rows.v:235$191'.
+Found and cleaned up 1 empty switch in `\hexDecRow.$proc$rows.v:200$190'.
+Removing empty process `hexDecRow.$proc$rows.v:200$190'.
+Removing empty process `toDec.$proc$rows.v:140$177'.
+Removing empty process `toDec.$proc$rows.v:139$176'.
+Removing empty process `toDec.$proc$rows.v:138$175'.
+Removing empty process `toDec.$proc$rows.v:137$174'.
+Removing empty process `toDec.$proc$rows.v:0$173'.
+Removing empty process `toDec.$proc$rows.v:0$172'.
+Removing empty process `toDec.$proc$rows.v:0$171'.
+Found and cleaned up 2 empty switches in `\toDec.$proc$rows.v:147$156'.
+Removing empty process `toDec.$proc$rows.v:147$156'.
+Cleaned up 6 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toHex.
+Optimizing module hexDecRow.
+<suppressed ~1 debug messages>
+Optimizing module toDec.
+<suppressed ~4 debug messages>
+
+2.3. Executing FUTURE pass.
+
+2.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module toHex.
+Optimizing module hexDecRow.
+Optimizing module toDec.
+
+2.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \toHex..
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Removed 0 unused cells and 58 unused wires.
+<suppressed ~3 debug messages>
+
+2.6. Executing CHECK pass (checking for obvious problems).
+Checking module hexDecRow...
+Checking module toDec...
+Checking module toHex...
+Found and reported 0 problems.
+
+2.7. Executing OPT pass (performing simple optimizations).
+
+2.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hexDecRow.
+<suppressed ~1 debug messages>
+Optimizing module toDec.
+Optimizing module toHex.
+
+2.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\hexDecRow'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\toDec'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `\toHex'.
+Removed a total of 15 cells.
+
+2.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \hexDecRow..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \toDec..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \toHex..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+2.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \hexDecRow.
+    New ctrl vector for $pmux cell $procmux$451: { $procmux$464_CMP $procmux$462_CMP $procmux$460_CMP $procmux$459_CMP $procmux$458_CMP $auto$opt_reduce.cc:134:opt_pmux$524 $procmux$456_CMP $auto$opt_reduce.cc:134:opt_pmux$522 $procmux$454_CMP $procmux$453_CMP $procmux$452_CMP }
+  Optimizing cells in module \hexDecRow.
+  Optimizing cells in module \toDec.
+  Optimizing cells in module \toHex.
+Performed a total of 1 changes.
+
+2.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\hexDecRow'.
+Finding identical cells in module `\toDec'.
+Finding identical cells in module `\toHex'.
+Removed a total of 0 cells.
+
+2.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+Removed 0 unused cells and 16 unused wires.
+<suppressed ~2 debug messages>
+
+2.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hexDecRow.
+Optimizing module toDec.
+Optimizing module toHex.
+
+2.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \hexDecRow..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \toDec..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \toHex..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+2.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \hexDecRow.
+  Optimizing cells in module \toDec.
+  Optimizing cells in module \toHex.
+Performed a total of 0 changes.
+
+2.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\hexDecRow'.
+Finding identical cells in module `\toDec'.
+Finding identical cells in module `\toHex'.
+Removed a total of 0 cells.
+
+2.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+
+2.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hexDecRow.
+Optimizing module toDec.
+Optimizing module toHex.
+
+2.7.14. Finished OPT passes. (There is nothing left to do.)
+
+2.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 3 bits (of 4) from port B of cell hexDecRow.$procmux$463_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell hexDecRow.$procmux$462_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell hexDecRow.$procmux$461_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell hexDecRow.$procmux$460_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell hexDecRow.$procmux$459_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell hexDecRow.$procmux$406_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell hexDecRow.$procmux$391_CMP0 ($eq).
+Removed top 2 bits (of 4) from mux cell toDec.$procmux$490 ($mux).
+Removed top 2 bits (of 4) from port B of cell toDec.$procmux$482_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell toDec.$procmux$479_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell toDec.$procmux$470_CMP0 ($eq).
+Removed top 29 bits (of 32) from port B of cell toDec.$ge$rows.v:156$157 ($ge).
+Removed top 10 bits (of 12) from mux cell toDec.$ternary$rows.v:156$158 ($mux).
+Removed top 10 bits (of 12) from port B of cell toDec.$add$rows.v:156$159 ($add).
+Removed top 29 bits (of 32) from port B of cell toDec.$ge$rows.v:156$160 ($ge).
+Removed top 6 bits (of 12) from mux cell toDec.$ternary$rows.v:156$161 ($mux).
+Removed top 6 bits (of 12) from port B of cell toDec.$add$rows.v:156$162 ($add).
+Removed top 29 bits (of 32) from port B of cell toDec.$ge$rows.v:156$163 ($ge).
+Removed top 2 bits (of 12) from mux cell toDec.$ternary$rows.v:156$164 ($mux).
+Removed top 2 bits (of 12) from port B of cell toDec.$add$rows.v:156$165 ($add).
+Removed top 1 bits (of 4) from port B of cell toDec.$eq$rows.v:162$166 ($eq).
+Removed top 31 bits (of 32) from port B of cell toDec.$add$rows.v:166$167 ($add).
+Removed top 28 bits (of 32) from port Y of cell toDec.$add$rows.v:166$167 ($add).
+Removed top 2 bits (of 8) from port A of cell toDec.$add$rows.v:170$168 ($add).
+Removed top 1 bits (of 8) from port Y of cell toDec.$add$rows.v:170$168 ($add).
+Removed top 2 bits (of 8) from port A of cell toDec.$add$rows.v:171$169 ($add).
+Removed top 1 bits (of 8) from port Y of cell toDec.$add$rows.v:171$169 ($add).
+Removed top 2 bits (of 8) from port A of cell toDec.$add$rows.v:172$170 ($add).
+Removed top 1 bits (of 8) from port Y of cell toDec.$add$rows.v:172$170 ($add).
+Removed top 28 bits (of 32) from wire toDec.$add$rows.v:166$167_Y.
+Removed top 1 bits (of 8) from wire toDec.$add$rows.v:170$168_Y.
+Removed top 1 bits (of 8) from wire toDec.$add$rows.v:171$169_Y.
+Removed top 1 bits (of 8) from wire toDec.$add$rows.v:172$170_Y.
+Removed top 2 bits (of 4) from wire toDec.$procmux$490_Y.
+Removed top 10 bits (of 12) from wire toDec.$ternary$rows.v:156$158_Y.
+Removed top 9 bits (of 12) from wire toDec.$ternary$rows.v:156$161_Y.
+Removed top 28 bits (of 32) from port B of cell toHex.$le$rows.v:126$151 ($le).
+Removed top 2 bits (of 8) from port A of cell toHex.$add$rows.v:126$152 ($add).
+Removed top 1 bits (of 8) from port Y of cell toHex.$add$rows.v:126$152 ($add).
+Removed top 2 bits (of 8) from port A of cell toHex.$add$rows.v:126$153 ($add).
+Removed top 1 bits (of 8) from port Y of cell toHex.$add$rows.v:126$153 ($add).
+Removed top 1 bits (of 8) from mux cell toHex.$ternary$rows.v:126$154 ($mux).
+Removed top 1 bits (of 8) from wire toHex.$0\hexChar[7:0].
+Removed top 1 bits (of 8) from wire toHex.$add$rows.v:126$152_Y.
+Removed top 1 bits (of 8) from wire toHex.$add$rows.v:126$153_Y.
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~2 debug messages>
+
+2.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module hexDecRow.
+Optimizing module toDec.
+Optimizing module toHex.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\hexDecRow'.
+Finding identical cells in module `\toDec'.
+Finding identical cells in module `\toHex'.
+Removed a total of 0 cells.
+
+2.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \hexDecRow..
+Finding unused cells or wires in module \toDec..
+Finding unused cells or wires in module \toHex..
+
+2.11.4. Finished fast OPT passes.
+
+2.12. Printing statistics.
+
+=== hexDecRow ===
+
+   Number of wires:                 77
+   Number of wire bits:            187
+   Number of public wires:          13
+   Number of public wire bits:      78
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 75
+     $assert                         6
+     $dff                           18
+     $eq                            22
+     $logic_not                      1
+     $mux                           22
+     $pmux                           1
+     $reduce_or                      2
+     toDec                           1
+     toHex                           2
+
+=== toDec ===
+
+   Number of wires:                 36
+   Number of wire bits:            226
+   Number of public wires:           9
+   Number of public wire bits:      61
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 34
+     $add                            7
+     $dff                            7
+     $eq                             4
+     $ge                             3
+     $logic_not                      1
+     $mux                            8
+     $pmux                           4
+
+=== toHex ===
+
+   Number of wires:                  7
+   Number of wire bits:             35
+   Number of public wires:           3
+   Number of public wire bits:      13
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  5
+     $add                            2
+     $dff                            1
+     $le                             1
+     $mux                            1
+
+=== design hierarchy ===
+
+   hexDecRow                         1
+     toDec                           1
+     toHex                           2
+
+   Number of wires:                127
+   Number of wire bits:            483
+   Number of public wires:          28
+   Number of public wire bits:     165
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                116
+     $add                           11
+     $assert                         6
+     $dff                           27
+     $eq                            26
+     $ge                             3
+     $le                             2
+     $logic_not                      2
+     $mux                           32
+     $pmux                           5
+     $reduce_or                      2
+
+2.13. Executing CHECK pass (checking for obvious problems).
+Checking module hexDecRow...
+Checking module toDec...
+Checking module toHex...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \hexDecRow
+Used module:     \toDec
+Used module:     \toHex
+
+3.2. Analyzing design hierarchy..
+Top module:  \hexDecRow
+Used module:     \toDec
+Used module:     \toHex
+Removed 0 unused modules.
+Module hexDecRow directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: de9271d43d, CPU: user 0.07s system 0.00s, MEM: 13.31 MB peak
+Yosys 0.35+36 (git sha1 c95298225, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 26% 2x read_verilog (0 sec), 18% 6x opt_expr (0 sec), ...

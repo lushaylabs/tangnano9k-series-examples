@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2024-04-30T11:45:22" hostname="DESKTOP-T1I841S" package="hexDecRow" id="0" name="default" tests="6" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property ASSERT in hexDecRow at rows.v:240.29-241.48" time="0" type="ASSERT" location="rows.v:240.29-241.48" id="$assert$rows.v:240$218">
+</testcase>
+<testcase classname="default" name="Property ASSERT in hexDecRow at rows.v:249.23-249.66" time="0" type="ASSERT" location="rows.v:249.23-249.66" id="$assert$rows.v:249$219">
+</testcase>
+<testcase classname="default" name="Property ASSERT in hexDecRow at rows.v:250.23-250.65" time="0" type="ASSERT" location="rows.v:250.23-250.65" id="$assert$rows.v:250$220">
+</testcase>
+<testcase classname="default" name="Property ASSERT in hexDecRow at rows.v:251.24-251.62" time="0" type="ASSERT" location="rows.v:251.24-251.62" id="$assert$rows.v:251$221">
+</testcase>
+<testcase classname="default" name="Property ASSERT in hexDecRow at rows.v:252.24-252.62" time="0" type="ASSERT" location="rows.v:252.24-252.62" id="$assert$rows.v:252$222">
+</testcase>
+<testcase classname="default" name="Property ASSERT in hexDecRow at rows.v:253.24-253.62" time="0" type="ASSERT" location="rows.v:253.24-253.62" id="$assert$rows.v:253$223">
+</testcase>
+<system-out>SBY 11:45:22 [hexDecRow] Removing directory '/mnt/c/Workspace/NES/NESTang/tangnano9k-series-examples/screen_data/hexDecRow'.
+SBY 11:45:22 [hexDecRow] Copy '/mnt/c/Workspace/NES/NESTang/tangnano9k-series-examples/screen_data/rows.v' to '/mnt/c/Workspace/NES/NESTang/tangnano9k-series-examples/screen_data/hexDecRow/src/rows.v'.
+SBY 11:45:22 [hexDecRow] engine_0: smtbmc
+SBY 11:45:22 [hexDecRow] base: starting process &quot;cd hexDecRow/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 11:45:22 [hexDecRow] base: finished (returncode=0)
+SBY 11:45:22 [hexDecRow] prep: starting process &quot;cd hexDecRow/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 11:45:22 [hexDecRow] prep: finished (returncode=0)
+SBY 11:45:22 [hexDecRow] smt2: starting process &quot;cd hexDecRow/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 11:45:22 [hexDecRow] smt2: finished (returncode=0)
+SBY 11:45:22 [hexDecRow] engine_0.basecase: starting process &quot;cd hexDecRow; yosys-smtbmc --presat --unroll --noprogress -t 25  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 11:45:22 [hexDecRow] engine_0.induction: starting process &quot;cd hexDecRow; yosys-smtbmc --presat --unroll -i --noprogress -t 25  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Solver: yices
+SBY 11:45:22 [hexDecRow] engine_0.induction: ##   0:00:00  Solver: yices
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 11:45:22 [hexDecRow] engine_0.induction: ##   0:00:00  Trying induction in step 25..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 11:45:22 [hexDecRow] engine_0.induction: ##   0:00:00  Trying induction in step 24..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 11:45:22 [hexDecRow] engine_0.induction: ##   0:00:00  Trying induction in step 23..
+SBY 11:45:22 [hexDecRow] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 11:45:22 [hexDecRow] engine_0.induction: ##   0:00:00  Status: passed
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 11:45:22 [hexDecRow] engine_0.induction: finished (returncode=0)
+SBY 11:45:22 [hexDecRow] engine_0.induction: Status returned by engine for induction: pass
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 20..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 20..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 21..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 21..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 22..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 22..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 23..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 23..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assumptions in step 24..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Checking assertions in step 24..
+SBY 11:45:22 [hexDecRow] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 11:45:22 [hexDecRow] engine_0.basecase: finished (returncode=0)
+SBY 11:45:22 [hexDecRow] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 11:45:22 [hexDecRow] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 11:45:22 [hexDecRow] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 11:45:22 [hexDecRow] summary: engine_0 (smtbmc) returned pass for basecase
+SBY 11:45:22 [hexDecRow] summary: engine_0 (smtbmc) returned pass for induction
+SBY 11:45:22 [hexDecRow] summary: engine_0 did not produce any traces
+SBY 11:45:22 [hexDecRow] summary: successful proof by k-induction.
+SBY 11:45:22 [hexDecRow] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

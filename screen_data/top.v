@@ -1,8 +1,10 @@
+`ifdef FORMAL
 `default_nettype none
+`endif
 
 module counterM(
     input clk,
-    output reg [7:0] counterValue = 0,
+    output reg [7:0] counterValue = 0
 );
     reg [32:0] clockCounter = 0;
 
@@ -43,8 +45,12 @@ module top
 
     wire [7:0] counterValue;
 
+    wire sys_reset;
+    assign sys_reset = 0;
+
     screen #(STARTUP_WAIT) scr(
-        clk, 
+        clk,
+        sys_reset,
         ioSclk, 
         ioSdin, 
         ioCs, 
@@ -56,6 +62,7 @@ module top
 
     textEngine te(
         clk,
+        sys_reset,
         pixelAddress,
         textPixelData,
         charAddress,
@@ -66,6 +73,7 @@ module top
 
     uart u(
         clk,
+        sys_reset,
         uartRx,
         uartByteReady,
         uartDataIn
@@ -97,6 +105,7 @@ module top
 
     progressRow row4(
         clk,
+        sys_reset, 
         counterValue,
         pixelAddress,
         progressPixelData

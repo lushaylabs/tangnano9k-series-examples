@@ -1,0 +1,22 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="clk" trig_type="0" capture_amount="8192" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
+        <SignalList>
+            <Bus capture_enable="true" name="uartDataIn[7:0]">
+                <Signal>uartDataIn[7]</Signal>
+                <Signal>uartDataIn[6]</Signal>
+                <Signal>uartDataIn[5]</Signal>
+                <Signal>uartDataIn[4]</Signal>
+                <Signal>uartDataIn[3]</Signal>
+                <Signal>uartDataIn[2]</Signal>
+                <Signal>uartDataIn[1]</Signal>
+                <Signal>uartDataIn[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">uartRx</Signal>
+            <Signal capture_enable="true">uartByteReady</Signal>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>0000000010011100</GAO_ID>
+</GAO_CONFIG>

@@ -1,0 +1,19 @@
+[options]
+mode prove
+depth 25
+
+[engines]
+smtbmc
+# abc pdr
+# aiger avy
+# aiger suprove
+
+[script]
+read_verilog -DTEXT -formal text.v
+read -formal screen.v
+prep -top textEngine
+
+[files]
+text.v
+screen.v
+font.hex

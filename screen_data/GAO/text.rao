@@ -1,0 +1,50 @@
+<?xml version="1" encoding="UTF-8"?>
+<GAO_CONFIG>
+    <Version>3.0</Version>
+    <Mode>Lite</Mode>
+    <AoCore_Lite index="0" sample_clock="clk" trig_type="0" capture_amount="1024" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="top">
+        <SignalList>
+            <Bus capture_enable="true" name="pixelAddress[9:0]">
+                <Signal>pixelAddress[9]</Signal>
+                <Signal>pixelAddress[8]</Signal>
+                <Signal>pixelAddress[7]</Signal>
+                <Signal>pixelAddress[6]</Signal>
+                <Signal>pixelAddress[5]</Signal>
+                <Signal>pixelAddress[4]</Signal>
+                <Signal>pixelAddress[3]</Signal>
+                <Signal>pixelAddress[2]</Signal>
+                <Signal>pixelAddress[1]</Signal>
+                <Signal>pixelAddress[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="textPixelData[7:0]">
+                <Signal>textPixelData[7]</Signal>
+                <Signal>textPixelData[6]</Signal>
+                <Signal>textPixelData[5]</Signal>
+                <Signal>textPixelData[4]</Signal>
+                <Signal>textPixelData[3]</Signal>
+                <Signal>textPixelData[2]</Signal>
+                <Signal>textPixelData[1]</Signal>
+                <Signal>textPixelData[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="charAddress[5:0]">
+                <Signal>charAddress[5]</Signal>
+                <Signal>charAddress[4]</Signal>
+                <Signal>charAddress[3]</Signal>
+                <Signal>charAddress[2]</Signal>
+                <Signal>charAddress[1]</Signal>
+                <Signal>charAddress[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="charOutput[7:0]">
+                <Signal>charOutput[7]</Signal>
+                <Signal>charOutput[6]</Signal>
+                <Signal>charOutput[5]</Signal>
+                <Signal>charOutput[4]</Signal>
+                <Signal>charOutput[3]</Signal>
+                <Signal>charOutput[2]</Signal>
+                <Signal>charOutput[1]</Signal>
+                <Signal>charOutput[0]</Signal>
+            </Bus>
+        </SignalList>
+    </AoCore_Lite>
+    <GAO_ID>0011011011101101</GAO_ID>
+</GAO_CONFIG>

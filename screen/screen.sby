@@ -1,0 +1,17 @@
+[options]
+mode prove
+depth 25
+
+[engines]
+smtbmc
+# abc pdr
+# aiger avy
+# aiger suprove
+
+[script]
+read_verilog -DSCREEN -formal screen.v
+prep -top screen
+
+[files]
+screen.v
+image.hex

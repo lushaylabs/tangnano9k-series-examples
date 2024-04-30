@@ -1,0 +1,16 @@
+[options]
+mode prove
+depth 15
+
+[engines]
+smtbmc
+# abc pdr
+# aiger avy
+# aiger suprove
+
+[script]
+read -formal counter.v
+prep -top counter
+
+[files]
+counter.v

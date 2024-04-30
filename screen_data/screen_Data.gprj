@@ -1,0 +1,19 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="rows.v" type="file.verilog" enable="1"/>
+        <File path="screen.v" type="file.verilog" enable="1"/>
+        <File path="text.v" type="file.verilog" enable="1"/>
+        <File path="top.v" type="file.verilog" enable="1"/>
+        <File path="uart.v" type="file.verilog" enable="1"/>
+        <File path="tangnano9k.cst" type="file.cst" enable="1"/>
+        <File path="GAO/screen.rao" type="file.gao" enable="0"/>
+        <File path="GAO/text.rao" type="file.gao" enable="0"/>
+        <File path="GAO/uart.rao" type="file.gao" enable="0"/>
+        <File path="font.hex" type="file.other" enable="1"/>
+    </FileList>
+</Project>
