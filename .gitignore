@@ -9,3 +9,4 @@ package-lock.json
 *.json
 !*.lushay.json
 *.o
+*.dbgmodule

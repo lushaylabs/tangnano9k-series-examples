@@ -16,7 +16,7 @@ module top
     output flashMosi,
     output flashCs,
     input btn1,
-    input btn2,
+    input btn2
 );
     wire [9:0] pixelAddress;
     wire [7:0] textPixelData;

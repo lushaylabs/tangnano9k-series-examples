@@ -7,7 +7,7 @@ module toHex(
     output reg [7:0] hexChar = "0"
 );
     always @(posedge clk) begin
-        hexChar <= (value <= 4'd9) ? 8'd48 + value : 8'd55 + value;
+        hexChar <= (value <= 4'd9) ? 8'd48 + {4'd0, value} : 8'd55 + {4'd0, value};
     end
 endmodule
 
